@@ -1,5 +1,3 @@
-# https://blender.stackexchange.com    docet
-
 import bpy
 
 mixamoToapple = {
@@ -52,3 +50,4 @@ shape_keys = selected_object.data.shape_keys.key_blocks
 
 for myKey in mixamoToapple:
     shape_keys[myKey].name = mixamoToapple[myKey]
+    shape_keys[mixamoToapple[myKey]].keyframe_insert(data_path="value", frame=0)
